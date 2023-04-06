@@ -1,5 +1,8 @@
+ArrayList<Bacteria> aBacteria = new ArrayList<Bacteria>();
+
+
 //declare bacteria variables here   
-Bacteria Chungus = new Bacteria();
+//Bacteria Chungus = new Bacteria();
 int foodX;
 int foodY;
 
@@ -12,17 +15,23 @@ int foodY;
  }   
  void draw()   
  {    
-   //move and show the bacteria 
    background(0);
+   for(int i = 0; i < 10; i++) {
+     aBacteria.add(new Bacteria());
+     aBacteria.get(i).show();
+     aBacteria.get(i).traverse();
+   }
+   //move and show the bacteria 
    rect(foodX-10,foodY-10,20,20);
    
-   Chungus.show();
-   Chungus.traverse();
  } 
  
  void mousePressed() {
-    Chungus.xFinal = mouseX;
-    Chungus.yFinal = mouseY;
+    for(int i = 0; i < 10; i++) {
+      aBacteria.get(i).setXFinal(mouseX);
+      aBacteria.get(i).setYFinal(mouseY);
+   }
+    
     foodX = mouseX;
     foodY = mouseY;
   }
