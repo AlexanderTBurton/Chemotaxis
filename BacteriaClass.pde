@@ -10,8 +10,6 @@ class Bacteria {
     y = 0;
   }
   
-  
-  
   void traverse() {
     int xDirection;
     int yDirection;
@@ -42,5 +40,21 @@ class Bacteria {
   void show() {
     ellipse(x, y, 50, 50);
     fill(bColor[0],bColor[1],bColor[2]);
+  }
+  
+  int getXFinal() {
+    return xFinal;
+  }
+  
+  int getYFinal() {
+    return yFinal;
+  }
+  
+  void setXFinal(int xFinal_) {
+    xFinal = xFinal_;
+  }
+  
+  void setYFinal(int yFinal_) {
+    yFinal = yFinal_;
   }
 }
